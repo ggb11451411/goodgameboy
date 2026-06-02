@@ -1,232 +1,259 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Good Game Boy</title>
+<title>Good Game Boy | Soulsborne Archive</title>
 
 <style>
-
 body{
-    font-family: Arial, sans-serif;
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
-    background:#f5f5f5;
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f0f12;
+    color:#f2f2f2;
 }
 
 header{
-    background:#222;
-    color:white;
-    padding:20px;
-    border-radius:10px;
+    padding:60px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#111,#2a1b1b);
 }
 
-nav{
-    margin-top:10px;
-}
-
-nav a{
-    color:white;
-    margin-right:20px;
-    text-decoration:none;
-}
-
-section{
-    background:white;
-    margin-top:20px;
-    padding:20px;
-    border-radius:10px;
-}
-
-h1{
+header h1{
+    font-size:48px;
     margin:0;
 }
 
-.tier{
-    display:flex;
+header p{
+    color:#aaa;
+    font-size:18px;
+}
+
+nav{
+    background:#18181d;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    color:#ddd;
+    margin:0 12px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffcc66;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+.intro{
+    background:#18181d;
+    padding:25px;
+    border-radius:16px;
+    margin-bottom:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     gap:20px;
-    flex-wrap:wrap;
 }
 
 .card{
-    background:#eeeeee;
-    padding:15px;
-    border-radius:10px;
-    min-width:220px;
+    background:#1c1c22;
+    padding:22px;
+    border-radius:16px;
+    border:1px solid #333;
+    transition:0.2s;
 }
 
-img{
-    max-width:100%;
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#ffcc66;
+}
+
+.card h2{
+    margin-top:0;
+    color:#ffcc66;
+}
+
+.card p{
+    color:#bbb;
+}
+
+button{
+    background:#ffcc66;
+    color:#111;
+    border:none;
+    padding:10px 18px;
     border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ffd98a;
+}
+
+.detail{
+    display:none;
+    margin-top:15px;
+    padding:15px;
+    background:#111;
+    border-radius:10px;
+    color:#ccc;
 }
 
 footer{
-    margin-top:30px;
     text-align:center;
-    color:gray;
+    padding:30px;
+    color:#777;
 }
-
 </style>
-
 </head>
 
 <body>
 
-<header>
-
-<h1>🎮 Good Game Boy</h1>
-
-<p>czg的个人游戏攻略站</p >
-
-<nav>
-<a href=" ">LOL Arena</a >
-<a href="#nightreign">黑夜君临</a >
-<a href="#bike">公路车</a >
-<a href="#fishing">钓鱼</a >
-</nav>
-
+<header id="top">
+    <h1>⚔️ Good Game Boy</h1>
+    <p>Soulsborne Archive · 魂系资料库 · 攻略 · PVP · Build</p>
 </header>
 
-<section id="arena">
+<nav>
+    <a href="#library">资料库</a>
+    <a href="#about">关于</a>
+    <a href="#top">返回顶部</a>
+</nav>
 
-<h2>🏆 LOL Arena 16.11 T1榜单</h2>
+<div class="container">
 
-<p>
-资料来源：兰斯Studios
-</p >
-
-<div class="tier">
-
-<div class="card">
-<h3>上路 T0</h3>
-<ul>
-<li><div class="card">
-<h3>上路 TOP5</h3>
-<ul>
-<li>🥇 克桑提（黑鬼）</li>
-<li>🥈 永恩</li>
-<li>🥉 墨菲特（石头人）</li>
-<li>4️⃣ 赛恩</li>
-<li>5️⃣ 亚托克斯（剑魔）</li>
-</ul>
-</div></li>
-</ul>
-</div>
-
-<div class="card">
-<h3>打野 T0</h3>
-<ul>
-<li><div class="card">
-<h3>打野 TOP5</h3>
-<ul>
-<li>🥇 李青（盲僧）</li>
-<li>🥈 赵信</li>
-<li>🥉 艾克</li>
-<li>4️⃣ 雷克塞（挖掘机）</li>
-<li>5️⃣ 魔腾（梦魇）</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>中路 T0</h3>
-<ul>
-<li><div class="card">
-<h3>中路 TOP6</h3>
-<ul>
-<li>🥇 维克兹（远古巫灵）</li>
-<li>🥈 薇古丝（忧郁波比）</li>
-<li>🥉 玛尔扎哈（压制哥）</li>
-<li>4️⃣ 黛安娜（皎月）</li>
-<li>5️⃣ 崔斯特（卡牌）</li>
-<li>6️⃣ 菲兹（小鱼人）</li>
-</ul>
-</div></li>
-</ul>
-</div>
-
-<div class="card">
-<h3>ADC T0</h3>
-<ul>
-<li><div class="card">
-<h3>ADC TOP5</h3>
-<ul>
-<li>🥇 韦鲁斯</li>
-<li>🥈 艾希（寒冰）</li>
-<li>🥉 金克丝</li>
-<li>4️⃣ 烬</li>
-<li>5️⃣ 伊泽瑞尔</li>
-</ul>
-</div></li>
-</ul>
-</div>
-
-<div class="card">
-<h3>辅助 T0</h3>
-<ul>
-<li><div class="card">
-<h3>辅助 TOP5</h3>
-<ul>
-<li>🥇 布隆</li>
-<li>🥈 锤石</li>
-<li>🥉 机器人</li>
-<li>4️⃣ 蕾欧娜（女坦）</li>
-<li>5️⃣ 泰坦</li>
-</ul>
-</li>
-</ul>
-</div>
-
-</div>
-
+<section class="intro" id="about">
+    <h2>关于这个网站</h2>
+    <p>
+        Good Game Boy 是一个以魂系游戏为核心的资料库网站。
+        目前由陈泽纲更新，后续计划扩展为魂系玩家社区与论坛。
+    </p>
+    <p>
+        当前阶段：资料库搭建中。
+    </p>
 </section>
 
-<section>
+<section id="library">
+    <h2>魂系游戏资料库</h2>
 
-<h2>📷 Arena榜单截图</h2>
+    <div class="grid">
 
-<p>后续上传图片后将在这里显示</p >
+        <div class="card">
+            <h2>魂1</h2>
+            <p>Dark Souls</p>
+            <button onclick="toggleDetail('ds1')">查看内容</button>
+            <div class="detail" id="ds1">
+                <p>待更新...</p>
+            </div>
+        </div>
 
-<p>更新中...</p >
+        <div class="card">
+            <h2>魂2</h2>
+            <p>Dark Souls II</p>
+            <button onclick="toggleDetail('ds2')">查看内容</button>
+            <div class="detail" id="ds2">
+                <p>待更新...</p>
+            </div>
+        </div>
 
+        <div class="card">
+            <h2>魂3</h2>
+            <p>Dark Souls III</p>
+            <button onclick="toggleDetail('ds3')">查看内容</button>
+            <div class="detail" id="ds3">
+                <p>待更新...</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>血源</h2>
+            <p>Bloodborne</p>
+            <button onclick="toggleDetail('bb')">查看内容</button>
+            <div class="detail" id="bb">
+                <p>待更新...</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>法环</h2>
+            <p>Elden Ring</p>
+            <button onclick="toggleDetail('er')">查看内容</button>
+            <div class="detail" id="er">
+                <p>待更新...</p>
+                <ul>
+                    <li>PVP</li>
+                    <li>Build</li>
+                    <li>武器排行</li>
+                    <li>Boss攻略</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>黑环</h2>
+            <p>Elden Ring Nightreign</p>
+            <button onclick="toggleDetail('nr')">查看内容</button>
+            <div class="detail" id="nr">
+                <p>待更新...</p>
+                <ul>
+                    <li>英雄梯度</li>
+                    <li>遗物推荐</li>
+                    <li>武器推荐</li>
+                    <li>Boss攻略</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>恶魔之魂</h2>
+            <p>Demon's Souls</p>
+            <button onclick="toggleDetail('des')">查看内容</button>
+            <div class="detail" id="des">
+                <p>待更新...</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>只狼</h2>
+            <p>Sekiro</p>
+            <button onclick="toggleDetail('sekiro')">查看内容</button>
+            <div class="detail" id="sekiro">
+                <p>待更新...</p>
+            </div>
+        </div>
+
+    </div>
 </section>
 
-<section id="nightreign">
-
-<h2>⚔️ 黑夜君临</h2>
-
-<p>更新中...</p >
-
-</section>
-
-<section id="bike">
-
-<h2>🚴 公路车</h2>
-
-<p>更新中...</p >
-
-</section>
-
-<section id="fishing">
-
-<h2>🎣 钓鱼</h2>
-
-<p>更新中...</p >
-
-</section>
+</div>
 
 <footer>
-
-<p>
-GoodGameBoy.com © 2026
-</p >
-
+    <p>GoodGameBoy.com © 2026</p>
 </footer>
+
+<script>
+function toggleDetail(id){
+    const box = document.getElementById(id);
+    if(box.style.display === "block"){
+        box.style.display = "none";
+    }else{
+        box.style.display = "block";
+    }
+}
+</script>
 
 </body>
 </html>
