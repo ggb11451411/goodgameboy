@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Good Game Boy | Soulsborne Archive</title>
-
 <style>
 body{
     margin:0;
@@ -12,61 +11,52 @@ body{
     background:#0f0f12;
     color:#f2f2f2;
 }
-
 header{
     padding:60px 20px;
     text-align:center;
     background:linear-gradient(135deg,#111,#2a1b1b);
 }
-
 header h1{
     font-size:48px;
     margin:0;
 }
-
 header p{
     color:#aaa;
     font-size:18px;
 }
-
 nav{
     background:#18181d;
     padding:15px;
     text-align:center;
     position:sticky;
     top:0;
+    z-index:10;
 }
-
 nav a{
     color:#ddd;
     margin:0 12px;
     text-decoration:none;
     font-weight:bold;
 }
-
 nav a:hover{
     color:#ffcc66;
 }
-
 .container{
     max-width:1100px;
     margin:auto;
     padding:30px 20px;
 }
-
 .intro{
     background:#18181d;
     padding:25px;
     border-radius:16px;
     margin-bottom:30px;
 }
-
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     gap:20px;
 }
-
 .card{
     background:#1c1c22;
     padding:22px;
@@ -74,21 +64,17 @@ nav a:hover{
     border:1px solid #333;
     transition:0.2s;
 }
-
 .card:hover{
     transform:translateY(-5px);
     border-color:#ffcc66;
 }
-
 .card h2{
     margin-top:0;
     color:#ffcc66;
 }
-
 .card p{
     color:#bbb;
 }
-
 button{
     background:#ffcc66;
     color:#111;
@@ -97,12 +83,12 @@ button{
     border-radius:10px;
     font-weight:bold;
     cursor:pointer;
+    margin-right:8px;
+    margin-top:8px;
 }
-
 button:hover{
     background:#ffd98a;
 }
-
 .detail{
     display:none;
     margin-top:15px;
@@ -111,7 +97,6 @@ button:hover{
     border-radius:10px;
     color:#ccc;
 }
-
 footer{
     text-align:center;
     padding:30px;
@@ -119,150 +104,133 @@ footer{
 }
 </style>
 </head>
-
 <body>
-
 <header id="top">
     <h1>⚔️ Good Game Boy</h1>
     <p>Soulsborne Archive · 魂系资料库 · 攻略 · PVP · Build</p>
 </header>
-
 <nav>
     <a href="#library">资料库</a>
     <a href="#about">关于</a>
     <a href="#top">返回顶部</a>
 </nav>
-
 <div class="container">
-
 <section class="intro" id="about">
     <h2>关于这个网站</h2>
     <p>
         Good Game Boy 是一个以魂系游戏为核心的资料库网站。
-        目前由ggb(Antonio)更新，后续计划扩展为魂系玩家社区与论坛。
+        目前由 ggb(Antonio) 更新，后续计划扩展为魂系玩家社区与论坛。
     </p>
     <p>
         当前阶段：资料库搭建中。
     </p>
 </section>
-
 <section id="library">
     <h2>魂系游戏资料库</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <a href="/ds1/"><button>进入专区</button></a>
-            <p>Dark Souls</p>
-            <button onclick="toggleDetail('ds1')">查看内容</button>
-            <div class="detail" id="ds1">
-                <p>待更新...</p>
-            </div>
+<div class="grid">
+    <div class="card">
+        <h2>魂1</h2>
+        <p>Dark Souls</p>
+        <a href="/ds1/"><button>进入专区</button></a>
+        <button onclick="toggleDetail('ds1')">查看内容</button>
+        <div class="detail" id="ds1">
+            <p>
+                《黑暗之魂》系列开山之作。
+                以互相连接的地图设计、碎片化叙事和高难度战斗闻名。
+                本专区将整理攻略、Build推荐、武器分析与PVP资料。
+            </p>
         </div>
-
-        <div class="card">
-            <a href="/ds2/">
-<button>进入专区</button>
-</a>
-            <p>Dark Souls II</p>
-            <button onclick="toggleDetail('ds2')">查看内容</button>
-            <div class="detail" id="ds2">
-                <p>待更新...</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <a href="/ds3/">
-<button>进入专区</button>
-</a>
-            <p>Dark Souls III</p>
-            <button onclick="toggleDetail('ds3')">查看内容</button>
-            <div class="detail" id="ds3">
-                <p>待更新...</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <a href="/bloodborne/">
-<button>进入专区</button>
-</a>
-            <p>Bloodborne</p>
-            <button onclick="toggleDetail('bb')">查看内容</button>
-            <div class="detail" id="bb">
-                <p>待更新...</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>
-<a href="/elden-ring/" style="color:#ffcc66;text-decoration:none;">
-法环
-</a>
-</h2>
-
-            <h2>法环</h2>
-
-<p>Elden Ring</p>
-
-<a href="/elden-ring/">
-<button>进入专区</button>
-</a>
-<button onclick="toggleDetail('er')">
-查看内容
-</button>
-
-<div class="detail" id="er">
-    <p>
-    FromSoftware规模最大的开放世界作品。
-    本专区重点收录125级PVP环境、武器生态、Build推荐与Boss攻略。
-    </p>
-</div>
-<button>进入专区</button>
-</a>
-            <p>Elden Ring Nightreign</p>
-            <button onclick="toggleDetail('nr')">查看内容</button>
-            <div class="detail" id="nr">
-                <p>待更新...</p>
-                <ul>
-                    <li>英雄梯度</li>
-                    <li>遗物推荐</li>
-                    <li>武器推荐</li>
-                    <li>Boss攻略</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="card">
-            <a href="/demons-souls/">
-<button>进入专区</button>
-</a>
-            <p>Demon's Souls</p>
-            <button onclick="toggleDetail('des')">查看内容</button>
-            <div class="detail" id="des">
-                <p>待更新...</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <a href="/sekiro/">
-<button>进入专区</button>
-</a>
-            <p>Sekiro</p>
-            <button onclick="toggleDetail('sekiro')">查看内容</button>
-            <div class="detail" id="sekiro">
-                <p>待更新...</p>
-            </div>
-        </div>
-
     </div>
-</section>
-
+    <div class="card">
+        <h2>魂2</h2>
+        <p>Dark Souls II</p>
+        <a href="/ds2/"><button>进入专区</button></a>
+        <button onclick="toggleDetail('ds2')">查看内容</button>
+        <div class="detail" id="ds2">
+            <p>
+                《黑暗之魂2》拥有系列中非常丰富的Build选择和独特机制。
+                本专区将整理武器分析、PVP环境、速通路线以及DLC攻略。
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <h2>魂3</h2>
+        <p>Dark Souls III</p>
+        <a href="/ds3/"><button>进入专区</button></a>
+        <button onclick="toggleDetail('ds3')">查看内容</button>
+        <div class="detail" id="ds3">
+            <p>
+                《黑暗之魂3》是系列PVP最成熟的作品之一。
+                本专区将收录竞技场环境分析、武器梯度、Build推荐和Boss攻略。
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <h2>血源</h2>
+        <p>Bloodborne</p>
+        <a href="/bloodborne/"><button>进入专区</button></a>
+        <button onclick="toggleDetail('bb')">查看内容</button>
+        <div class="detail" id="bb">
+            <p>
+                《血源诅咒》以高速战斗、枪反系统和克苏鲁风格闻名。
+                本专区将整理武器评测、迷宫资料、Boss打法与剧情考据。
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <h2>法环</h2>
+        <p>Elden Ring</p>
+        <a href="/elden-ring/"><button>进入专区</button></a>
+        <button onclick="toggleDetail('er')">查看内容</button>
+        <div class="detail" id="er">
+            <p>
+                《艾尔登法环》是 FromSoftware 规模最大的开放世界作品。
+                本专区重点收录125级PVP环境、武器生态、Build推荐与Boss攻略。
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <h2>黑环</h2>
+        <p>Elden Ring Nightreign</p>
+        <a href="/nightreign/"><button>进入专区</button></a>
+        <button onclick="toggleDetail('nr')">查看内容</button>
+        <div class="detail" id="nr">
+            <p>
+                《艾尔登法环：黑夜君临》是以合作生存和战斗构筑为核心的新作。
+                本专区将持续更新英雄梯度、遗物搭配、武器推荐、Boss攻略和版本分析。
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <h2>恶魔之魂</h2>
+        <p>Demon's Souls</p>
+        <a href="/demons-souls/"><button>进入专区</button></a>
+        <button onclick="toggleDetail('des')">查看内容</button>
+        <div class="detail" id="des">
+            <p>
+                《恶魔之魂》是魂系列的起点，也是现代魂系游戏的开山之作。
+                本专区将整理世界倾向机制、职业推荐、武器资料以及关卡攻略。
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <h2>只狼</h2>
+        <p>Sekiro</p>
+        <a href="/sekiro/"><button>进入专区</button></a>
+        <button onclick="toggleDetail('sekiro')">查看内容</button>
+        <div class="detail" id="sekiro">
+            <p>
+                《只狼：影逝二度》以招架系统、高强度Boss战和动作节奏著称。
+                本专区将整理义手工具、Boss攻略、速通路线和技巧教学。
+            </p>
+        </div>
+    </div>
 </div>
-
+</section>
+</div>
 <footer>
     <p>GoodGameBoy.com © 2026</p>
 </footer>
-
 <script>
 function toggleDetail(id){
     const box = document.getElementById(id);
@@ -273,6 +241,5 @@ function toggleDetail(id){
     }
 }
 </script>
-
 </body>
 </html>
